@@ -16,10 +16,4 @@ enum AreaAccess {
     case office
 }
 
-enum GuestType {
-    case classic
-    case vip
-    case childFree
-    case hourlyEmployee
-    case manager
-}
+

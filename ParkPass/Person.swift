@@ -8,9 +8,20 @@
 
 import Foundation
 
+enum GuestType {
+    case classic
+    case vip
+    case childFree
+}
+
+enum EmployeeType {
+    
+}
+
 protocol Person {
     var firstName: String? { get set }
     var lastName: String? { get set }
+    var birthDay: Date {get set}
 }
 
 protocol ParkGuest: Person {
@@ -22,6 +33,7 @@ protocol ParkEmployee: Person {
     var city: String { get set }
     var stateCode: String { get set }
     var zipCode: Int { get set }
+    var employeeType: EmployeeType { get set }
 
 }
 
@@ -32,12 +44,10 @@ struct HourlyEmployee: ParkEmployee {
     var city: String
     var stateCode: String
     var zipCode: Int
-    var guestType: GuestType
+    var birthDay: Date
+    var employeeType: EmployeeType
     var access: [AreaAccess]
 }
 
 
-class Employee {
-    
 
-}
